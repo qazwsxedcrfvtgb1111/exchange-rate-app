@@ -4,7 +4,9 @@
     <form action="{{action('ExchangeController@result')}}" method="get">
         <div class="row">
             @foreach($errors->all() as $error)
-                {{$error}}
+                <div class="alert alert-danger error-message">
+                    {{$error}}
+                </div>
             @endforeach
         </div>
         <div class="row">

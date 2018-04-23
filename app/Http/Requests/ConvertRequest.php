@@ -25,8 +25,8 @@ class ConvertRequest extends FormRequest
     {
         return [
             'from_currency' => 'string',
-            'to_currency' => 'string',
-            'amount' => 'numeric'
+            'to_currency' => ['string', 'different:from_currency'],
+            'amount' => ['required', 'numeric']
         ];
     }
 }
