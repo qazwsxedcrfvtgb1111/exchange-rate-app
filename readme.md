@@ -1,5 +1,6 @@
 The project requires you to have composer npm and yarn installed
-To run the project execute
+
+To run the project execute the following commands in the project directory
 
 ```
 composer install
