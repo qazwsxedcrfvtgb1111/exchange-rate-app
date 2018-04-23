@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ExchangeController@index');
+Route::get('/result', 'ExchangeController@result');
+Route::get('/error', 'ExchangeController@error');

@@ -46,6 +46,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if($exception instanceof ExchangeException) {
+            return redirect(action('ExchangeController@error'));
+        }
         return parent::render($request, $exception);
     }
 }
